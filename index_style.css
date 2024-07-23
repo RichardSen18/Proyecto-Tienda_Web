@@ -1,0 +1,824 @@
+/* Colores */
+:root {
+    --blanco: #ffffff;
+    --morado-fuerte: #4A1985;
+    --negro: #000;
+    --footer: #DDD6E8;
+}
+
+* {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+    margin: 0;
+}
+
+p {
+    text-wrap: pretty;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ------------------------ CSS para dispositivos DESKTOP ------------------------ */
+@media (min-width:1024px) {
+
+    /* -------- Contenedor Princioal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1.5fr 5fr;
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* ------------------------ Contenedor del header ------------------------ */
+    .contenedor-header {
+        background-color: var(--morado-fuerte); 
+        grid-area: 1/1/2/3;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 20%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 65%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del navbar --------  */
+    .navbar {
+        width: 50%;
+        height: 98%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .navbar>ul>li>a {
+        color: white;
+    }
+
+    /* -------- Contenedor de los botones -------- */
+    .register-button {
+        width: 30%;
+        height: 98%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .login {
+        background-color: var(--blanco);
+        color: var(--morado-fuerte);
+
+        border: 1px solid var(--blanco);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    .sing-up {
+        color: var(--blanco);
+
+        border: 1px solid var(--blanco);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* ------------------------ Contenedor del Main ------------------------ */
+    .contenedor-main {
+        grid-area: 2/1/3/3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        row-gap: 20px;
+        margin: 40px 0px;
+    }
+
+    /* -------- Contenedor del carouserl -------- */
+    .contenedor-carousel {
+        width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-item>img {
+        height: 350px;
+    }
+
+    /* -------- Contenedor de las cards -------- */
+    .contenedor-cards {
+        width: 70%;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 10px 20px;
+    }
+
+    .card {
+        width: 100%;
+        /* border: none; */
+    }
+
+    .card>img {
+        width: 100%;
+        height: 80%;
+    }
+
+    /* Body de la card  */
+    .card-body {
+        background-color: var(--blanco);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .card-body>a{
+        color: var(--blanco);
+        background-color: var(--morado-fuerte);
+    }
+
+    /* ------------------------ Contenedor del Footer ------------------------ */
+    .contenedor-footer {
+        background-color: var(--footer);
+        grid-area: 3/1/4/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .Terminos-Copyright {
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        color: var(--morado-fuerte);
+        text-decoration: none;
+    }
+
+    .Redes-sociales {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 30%;
+        margin: 30px 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+
+    .contenedor-contacto>a{
+        color: var(--morado-fuerte);
+    }
+}
+
+/* ------------------------ Estilos para tableta en posicion vertical ------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* -------- Contenedor Princioal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1.5fr 5fr;
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* ------------------------ Contenedor del header ------------------------ */
+    .contenedor-header {
+        background-color: var(--morado-fuerte); 
+        grid-area: 1/1/2/3;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 30%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 80%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del navbar --------  */
+    .navbar {
+        display: none;
+    }
+
+    /* -------- Contenedor de los botones -------- */
+    .register-button {
+        display: none;
+    }
+
+    /* -------- Contenedor del menu responsivo --------  */
+    .menu {
+        width: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right:10%;
+    }
+
+    .bi-list {
+        font-size: 2em;
+    }
+
+    .btn-menu {
+        width: 30%;
+        height: 50%;
+        background-color: var(--blanco);
+        color: var(--morado-fuerte);
+        border-color: var(--morado-fuerte);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .offcanvas.offcanvas-end {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del header del menu responsivo --------  */
+    .offcanvas-header {
+        border: 2px solid;
+    }
+
+    /* -------- Contenedor del body del menu responsivo --------  */
+    .offcanvas-body {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* -------- Contenedor de la lista -------- */
+    .menu-navbar {
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        margin: 10px 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* -------- Contenedor de los botones -------- */
+    .menu-register-button {
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    .login {
+        background-color: var(--morado-fuerte);
+        color: var(--blanco);
+
+        border: 1px solid var(--morado-fuerte);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    .sing-up {
+        color: var(--morado-fuerte);
+
+        border: 1px solid var(--morado-fuerte);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    /* ------------------------ Contenedor del Main ------------------------ */
+    .contenedor-main {
+        grid-area: 2/1/3/3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        row-gap: 20px;
+        margin: 40px 0px;
+    }
+
+    /* -------- Contenedor del carouserl -------- */
+    .contenedor-carousel {
+        width: 70%;
+        height: auto;
+        margin-bottom: 20px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-item>img {
+        height: 350px;
+    }
+
+    /* -------- Contenedor de las cards -------- */
+    .contenedor-cards {
+        width: 70%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 10px 20px;
+    }
+
+    .card {
+        width: 100%;
+        /* border: none; */
+    }
+
+    .card>img {
+        width: 100%;
+        height: 80%;
+    }
+
+    /* Body de la card  */
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .card-body>a{
+        color: var(--blanco);
+        background-color: var(--morado-fuerte);
+    }
+
+    /* ------------------------ Contenedor del Footer ------------------------ */
+    .contenedor-footer {
+        background-color: var(--footer);
+        grid-area: 3/1/4/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .Terminos-Copyright {
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        color: var(--morado-fuerte);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .Terminos-Copyright>p {
+        text-align: center;
+    }
+
+    .Redes-sociales {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 30%;
+        margin: 30px 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+
+    .contenedor-contacto>a{
+        color: var(--morado-fuerte);
+    }
+}
+
+/* ------------------------ CSS para dispositivos mobiles ------------------------ */
+@media (max-width:768px) {
+
+    /* -------- Contenedor Principal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: 1.5fr 5fr;
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* ------------------------ Contenedor del header ------------------------ */
+    .contenedor-header {
+        background-color: var(--morado-fuerte); 
+        grid-area: 1/1/2/3;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 40%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 80%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del navbar --------  */
+    .navbar {
+        display: none;
+    }
+
+    /* -------- Contenedor de los botones -------- */
+    .register-button {
+        display: none;
+    }
+
+    /* -------- Contenedor del menu responsivo --------  */
+    .menu {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right:10%;
+    }
+
+    .bi-list {
+        font-size: 2em;
+    }
+
+    .btn-menu {
+        width: 35%;
+        height: 60%;
+        background-color: var(--blanco);
+        color: var(--morado-fuerte);
+        border-color: var(--morado-fuerte);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .offcanvas.offcanvas-end {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del header del menu responsivo --------  */
+    .offcanvas-header {
+        border: 2px solid;
+    }
+
+    /* -------- Contenedor del body del menu responsivo --------  */
+    .offcanvas-body {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /* -------- Contenedor de la lista -------- */
+    .menu-navbar {
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        margin: 10px 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* -------- Contenedor de los botones -------- */
+    .menu-register-button {
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    .login {
+        background-color: var(--morado-fuerte);
+        color: var(--blanco);
+
+        border: 1px solid var(--morado-fuerte);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    .sing-up {
+        color: var(--morado-fuerte);
+
+        border: 1px solid var(--morado-fuerte);
+        padding: 5px 25px;
+        border-radius: 15px;
+    }
+
+    /* ------------------------ Contenedor del Main ------------------------ */
+    .contenedor-main {
+        grid-area: 2/1/3/3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* -------- Contenedor del carouserl -------- */
+    .contenedor-carousel {
+        width: 80%;
+        height: auto;
+        margin: 20px 0px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .carousel-item>img {
+        height: 140px;
+    }
+
+    /* -------- Contenedor de las cards -------- */
+    .contenedor-cards {
+        width: 80%;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        /* border: none; */
+    }
+
+    .card>img {
+        width: 100%;
+        height: 80%;
+    }
+
+    /* Body de la card  */
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .card-body>a{
+        color: var(--blanco);
+        background-color: var(--morado-fuerte);
+    }
+
+    /* ------------------------ Contenedor del Footer ------------------------ */
+    .contenedor-footer {
+        background-color: var(--footer);
+        grid-area: 3/1/4/3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright {
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        color: var(--morado-fuerte);
+
+        text-decoration: none;
+    }
+
+    .Redes-sociales {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+
+    .contenedor-contacto>a{
+        color: var(--morado-fuerte);
+    }
+}

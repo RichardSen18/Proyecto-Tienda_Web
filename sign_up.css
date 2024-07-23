@@ -1,0 +1,696 @@
+/* Colores */
+:root {
+    --blanco: #ffffff;
+    --morado-fuerte: #4A1985;
+    --negro: #000;
+}
+
+
+* {
+    box-sizing: border-box;
+
+    min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+    margin: 0;
+}
+
+p {
+    text-wrap: pretty;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* ------------------------ CSS para dispositivos DESKTOP ------------------------ */
+@media (min-width:1024px) {
+
+    /* -------- Contenedor Princioal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* -------- Contenedor del header -------- */
+    .contenedor-header {
+        background-color: var(--morado-fuerte);
+        grid-area: 1/1/2/6;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 20%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 65%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del Main -------- */
+    .contenedor-main {
+        grid-area: 2/1/3/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+    }
+
+    /* -------- Contenedor principal de la imagen -------- */
+    .main-img {
+        width: 30%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-img>img {
+        border-radius: 20px;
+    }
+
+    /* -------- Contenedor principal del signup -------- */
+    .main-signup {
+        width: 30%;
+        height: 80%;
+        border: 2px solid;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Contenedor del forms -------- */
+    .contenedor-forms {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Formulario -------- */
+    .forms {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 10px;
+    }
+
+    .forms>h1 {
+        text-align: center;
+    }
+
+    .diseño-input {
+        background-color: rgba(220, 220, 228, 0.576);
+        border: 1px solid rgba(178, 178, 178, 0.625);
+        border-radius: 5px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    #boton-registro {
+        background-color: var(--morado-fuerte);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+
+        border-radius: 15px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    /* -------- Contenedor de la opcion secion -------- */
+    .contenedor-sesion {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .contenedor-sesion>a {
+        text-decoration: none;
+        color: var(--morado-fuerte);
+    }
+
+    /* -------- Contenedor para las redes sociales -------- */
+    .contenedor-redes {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        row-gap: 10px;
+    }
+
+    .redes-text {
+        color: red;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes-icons {
+        width: 33%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes-icons>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2rem;
+    }
+
+    /* -------- Contenedor del Footer -------- */
+    .contenedor-footer {
+        background-color: rgba(178, 178, 178, 0.625);
+        grid-area: 3/1/4/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .Terminos-Copyright {
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        text-decoration: none;
+    }
+
+    .Redes-sociales {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 30%;
+        margin: 30px 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+}
+
+/* ------------------------ Estilos para tableta en posicion vertical ------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* -------- Contenedor Princioal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* -------- Contenedor del header -------- */
+    .contenedor-header {
+        background-color: var(--morado-fuerte);
+        grid-area: 1/1/2/6;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 30%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 80%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del Main -------- */
+    .contenedor-main {
+        grid-area: 2/1/3/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    /* -------- Contenedor principal del signup -------- */
+    .main-signup {
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Contenedor del forms -------- */
+    .contenedor-forms {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Formulario -------- */
+    .forms {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 10px;
+        margin-top: 20px;
+    }
+
+    .forms>h1 {
+        text-align: center;
+    }
+
+    .diseño-input {
+        background-color: rgba(220, 220, 228, 0.576);
+        border: 1px solid rgba(178, 178, 178, 0.625);
+        border-radius: 5px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    #boton-registro {
+        background-color: var(--morado-fuerte);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+
+        border-radius: 10px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    /* -------- Contenedor de la opcion inicio_sesion -------- */
+    .contenedor-sesion {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor-sesion>a {
+        text-decoration: none;
+        color: var(--morado-fuerte);
+    }
+
+    /* -------- Contenedor para las redes sociales -------- */
+    .contenedor-redes {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .redes-text {
+        color:red;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes-icons {
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes-icons>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2rem;
+    }
+
+    /* -------- Contenedor del Footer -------- */
+    .contenedor-footer {
+        background-color: rgba(178, 178, 178, 0.625);
+        grid-area: 3/1/4/6;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .Terminos-Copyright {
+        width: 20%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .Terminos-Copyright>p {
+        text-align: center;
+    }
+
+    .Redes-sociales {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 30%;
+        margin: 30px 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+}
+
+/* ------------------------ CSS para dispositivos mobiles ------------------------ */
+@media (max-width:767px) {
+
+    /* -------- Contenedor Princioal -------- */
+    .contenedor-body {
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.5fr 5fr 1fr;
+    }
+
+    /* -------- Contenedor del header -------- */
+    .contenedor-header {
+        background-color: var(--morado-fuerte);
+        grid-area: 1/1/2/6;
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* -------- Contenedor del icono -------- */
+    .icon {
+        width: 30%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    .link {
+        width: 50%;
+        height: 80%;
+
+        display: flex;
+    }
+
+    .link>img {
+        width: 100%;
+    }
+
+    /* -------- Contenedor del Main -------- */
+    .contenedor-main {
+        grid-area: 2/1/3/6;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    /* -------- Contenedor principal del signup -------- */
+    .main-signup {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Contenedor del forms -------- */
+    .contenedor-forms {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    /* -------- Formulario -------- */
+    .forms {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        row-gap: 10px;
+        margin-top: 20px;
+    }
+
+    .forms>h1 {
+        text-align: center;
+    }
+
+    .diseño-input {
+        background-color: rgba(220, 220, 228, 0.576);
+        border: 1px solid rgba(178, 178, 178, 0.625);
+        border-radius: 5px;
+        padding: 15px 0px 15px 0px;
+    }
+
+    #boton-registro {
+        background-color: var(--morado-fuerte);
+        color: white;
+        text-align: center;
+        text-decoration: none;
+
+        border-radius: 10px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    /* -------- Contenedor de la opcion inicio_sesion -------- */
+    .contenedor-sesion {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor-sesion>a {
+        text-decoration: none;
+        color: var(--morado-fuerte);
+    }
+
+    /* -------- Contenedor para las redes sociales -------- */
+    .contenedor-redes {
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        row-gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .redes-text {
+        color: red;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .redes-icons {
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes-icons>a>i {
+        color: var(--morado-fuerte);
+        font-size: 2rem;
+    }
+
+    /* ------------------------ Contenedor del Footer ------------------------ */
+    .contenedor-footer {
+        background-color: rgba(178, 178, 178, 0.625);
+        grid-area: 3/1/4/6;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright {
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .Terminos-Copyright>a {
+        text-decoration: none;
+    }
+
+    .Redes-sociales {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 10%;
+    }
+
+    .Redes-sociales>a>i {
+        font-size: 2em;
+    }
+
+    .contenedor-contacto {
+        width: 80%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    .contenedor-contacto>p {
+        text-align: center;
+    }
+}
